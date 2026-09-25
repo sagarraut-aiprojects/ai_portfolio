@@ -1,16 +1,18 @@
 [project]
 name = "cli-memory-chatbot"
 version = "0.1.0"
-description = "Add your description here"
+description = "CLI chatbot with persistent conversation memory"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "openai>=3.19.2",
+    "python-dotenv>=1.2.3",
 ]
 
-[project.scripts]
-cli-memory-chatbot = "cli_memory_chatbot:main"
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
 
-[build-system]
-requires = ["uv_build>=0.12.15,<0.13.0"]
-build-backend = "uv_build"
+[tool.pytest.ini_options]
+pythonpath = ["src"]

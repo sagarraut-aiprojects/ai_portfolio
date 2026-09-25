@@ -1,0 +1,19 @@
+# Environment
+.venv/
+
+# Secrets
+.env
+
+# Persistent user data
+memory.json
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Testing
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
