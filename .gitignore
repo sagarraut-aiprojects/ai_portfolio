@@ -31,4 +31,15 @@ htmlcov/
 
 # OS files
 .DS_Store
-Thumbs.db
+Thumbs.db# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+
+# Local conversation data
+conversations/
+
+# Local test files
+test_ollama.py
