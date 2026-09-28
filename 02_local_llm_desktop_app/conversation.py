@@ -5,7 +5,7 @@ import uuid
 
 
 # Folder where conversations will be stored
-CONVERSATIONS_DIR = Path("conversations")
+CONVERSATIONS_DIR = (Path.home() / "AppData" / "Local" / "ProfSagarLocalAI" / "conversations")
 
 
 def create_conversation():
@@ -24,7 +24,7 @@ def create_conversation():
 def save_conversation(conversation):
     """Save a conversation to a JSON file."""
 
-    CONVERSATIONS_DIR.mkdir(exist_ok=True)
+    CONVERSATIONS_DIR.mkdir(parents=True, exist_ok=True)
 
     file_path = CONVERSATIONS_DIR / f"{conversation['id']}.json"
 
@@ -52,7 +52,7 @@ def load_conversation(conversation_id):
 def load_all_conversations():
     """Load all saved conversations."""
 
-    CONVERSATIONS_DIR.mkdir(exist_ok=True)
+    CONVERSATIONS_DIR.mkdir(parents=True, exist_ok=True)
 
     conversations = []
 

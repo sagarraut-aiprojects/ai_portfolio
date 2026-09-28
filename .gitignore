@@ -16,6 +16,9 @@ build/
 dist/
 *.egg-info/
 
+# Windows installer output
+installer/
+
 # Testing and coverage
 .pytest_cache/
 .coverage
@@ -31,12 +34,7 @@ htmlcov/
 
 # OS files
 .DS_Store
-Thumbs.db# Python
-__pycache__/
-*.pyc
-
-# Virtual environments
-.venv/
+Thumbs.db
 
 # Local conversation data
 conversations/
