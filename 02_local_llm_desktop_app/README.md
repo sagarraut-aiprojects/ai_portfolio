@@ -18,7 +18,7 @@ ProfSagarLocalAI provides a ChatGPT-style local desktop interface for interactin
 
 > **LLM Runtime:** Ollama
 
-> **GUI:** Tkinter / CustomTkinter
+> **GUI:** CustomTkinter
 
 > **Packaging:** PyInstaller
 
@@ -92,7 +92,7 @@ The application follows a simple layered architecture:
 
 │       Desktop GUI            │
 
-│     Tkinter / CustomTkinter  │
+│     CustomTkinter  │
 
 └──────────────┬───────────────┘
 
@@ -208,7 +208,7 @@ Larger models such as `gpt-oss` were tested during development but were consider
 
 
 
-### Tkinter / CustomTkinter
+### CustomTkinter
 
 
 
@@ -945,6 +945,7 @@ This project is intended primarily as a personal academic and professional portf
 
 
 See the repository for the applicable licensing terms.
+
 
 
 
