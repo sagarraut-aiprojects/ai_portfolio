@@ -45,8 +45,9 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\91982\AIProjects\ai_portfolio\02_local_llm_desktop_app\dist\ProfSagarLocalAI\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files.
+[Files]
+Source: "C:\Users\91982\AIProjects\ai_portfolio\02_local_llm_desktop_app\dist\ProfSagarLocalAI_Bootstrap.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\91982\AIProjects\ai_portfolio\02_local_llm_desktop_app\dist\ProfSagarLocalAI\*"; DestDir: "{app}\ProfSagarLocalAI"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Registry]
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
@@ -55,9 +56,9 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: s
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\ProfSagarLocalAI_Bootstrap.exe"
+Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\ProfSagarLocalAI_Bootstrap.exe"; Tasks: desktopicon
+
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#DoubleAmp(MyAppName)}}"; Flags: nowait postinstall skipifsilent
-
+Filename: "{app}\ProfSagarLocalAI_Bootstrap.exe"; Description: "{cm:LaunchProgram,{#DoubleAmp(MyAppName)}}"; Flags: nowait postinstall skipifsilent
